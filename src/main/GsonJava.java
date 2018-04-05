@@ -20,16 +20,19 @@ public class GsonJava {
 				+ " 221001 },'mobileNums': [ 111111, 222222 ]}";
 		Gson gson = new Gson();
 		Person person = gson.fromJson(jsonStr, Person.class);
+
 		System.out.println(person.getName());
 		System.out.println(person.getAddress().getCity());
 		long mobNums[] = person.getMobileNums();
 		System.out.println(mobNums[0]);
+
 		// from object to json
 		System.out.println("from object to json");
 		Person person1 = new Person();
 		createPerson(person1);
 		System.out.println(gson.toJson(person1));
-		//Pretty Printing for JSON Using Gson
+
+		// Pretty Printing for JSON Using Gson
 		System.out.println("Pretty Printing for JSON Using Gson");
 		Gson gson1 = new GsonBuilder().setPrettyPrinting().create();
 		createPerson(person1);

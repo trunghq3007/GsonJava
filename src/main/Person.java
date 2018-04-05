@@ -3,13 +3,15 @@
  */
 package main;
 
+import java.io.Serializable;
+
 /**
  * @description:
  * @author: Admin
  * @time: 6:05:58 PM
  * @date: Apr 2, 2018
  */
-public class Person {
+public class Person implements Serializable {
 	private int id;
 	private String name;
 	private Address address;
